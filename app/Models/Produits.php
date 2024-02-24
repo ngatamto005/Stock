@@ -14,5 +14,6 @@ class Produits extends Model
         'date_achat',
         'quantite',
         'image',
+        'utilisateur',
     ];
 }

@@ -70,10 +70,11 @@
                   <tr>
                     <th scope="col">Id </th>
                     <th scope="col">Nom </th>
-                    <th scope="col"> Description </th>
-                    <th scope="col"> Date Achat </th>
+                    <th scope="col"> Descript </th>
+                    <th scope="col">Categorie </th>
+                    <th scope="col"> Achat </th>
                     <th scope="col"> Qte </th>
-                    <th scope="col"> Image </th>
+                    <th scope="col"> Imge </th>
                     <th scope="col"> Actions </th>
                   </tr>
                 </thead>
@@ -83,6 +84,7 @@
                     <td class="tm-product-name">Lorem </td>
                     <td>xxxx@gmail.com</td>
                     <td>xxxx</td>
+                    <td> xxxxx </td>
                     <td> xxxxx </td>
                     <td> 2 </td>
                     <td>

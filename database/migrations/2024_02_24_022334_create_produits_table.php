@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('date_achat');
             $table->string('quantite');
-            $table->string('image',300);
+            $table->string('image',300)->nullable();
             $table->string('utilisateur');
             $table->timestamps();
         });

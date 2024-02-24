@@ -53,7 +53,7 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link d-block" href="deconnexion ">
-                Admin, <b>Deconnexion</b>
+                {{session('utilisateur')->utilisateur}}, <b>Deconnexion</b>
               </a>
             </li>
           </ul>
@@ -71,19 +71,17 @@
                     <th scope="col">Identifiant </th>
                     <th scope="col">Nom Client </th>
                     <th scope="col"> Email </th>
-                    <th scope="col"> Ville </th>
-                    <th scope="col"> Localisation </th>
+                    <th scope="col"> contact </th>
                     <th scope="col"> Actions </th>
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach ($clients as $user )
+                    @foreach ($customer as $cls )
                     <tr>
-                        <th scope="row">{{$user->id}}</th>
-                        <td class="tm-product-name">{{$user->nom}} </td>
-                        <td>{{$user->email}}/td>
-                        <td>{{$user->ville}}</td>
-                        <td> {{$user->contact }} </td>
+                        <th scope="row">{{$cls->id}}</th>
+                        <td class="tm-product-name">{{$cls->nom}}</td>
+                        <td>{{$cls->email}}</td>
+                        <td>{{$cls->contact}}</td>
                         <td>
                           <a href="#" class="tm-product-delete-link">
                             <i class="far fa-trash-alt tm-product-delete-icon"></i>
@@ -92,8 +90,8 @@
                             <i class="far fa-edit tm-product-delete-icon"></i>
                           </a>
                         </td>
+                    </tr>
                     @endforeach
-                  </tr>
                 </tbody>
               </table>
             </div>

@@ -53,7 +53,7 @@
             <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link d-block" href="deconnexion ">
-                    , <b>Deconnexion</b>
+                   {{session('utilisateur')->utilisateur}} , <b>Deconnexion</b>
                 </a>
             </li>
             </ul>
@@ -63,7 +63,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <p class="text-white mt-5 mb-5">Welcome back, <b></b></p>
+                    <p class="text-white mt-5 mb-5">bienvenue, {{session('utilisateur')->utilisateur}}<b></b></p>
                 </div>
             </div>
             <!-- row -->

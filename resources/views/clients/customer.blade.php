@@ -52,8 +52,7 @@
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link d-block" href="deconnexion ">
-                {{session('users')->utilisateur}}, <b>Deconnexion</b>
+              <a class="nav-link d-block" href="deconnexion ">{{session('utilisateur')->utilisateur}}, <b>Deconnexion</b>
               </a>
             </li>
           </ul>
@@ -99,31 +98,18 @@
                       required
                     />
                   </div>
-                  <div class="form-group mb-3">
-                    <label
-                      for="name"
-                      >
-                    </label>
-                    <input
-                      id="utilisateur"
-                      name="utilisateur"
-                      value="{{session('users')->utilisateur}}"
-                      type="hidden"
-                      class="form-control validate"
-                      required
-                    />
-                  </div>
+
               </div>
               <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
                 <div class="form-group mb-3">
                     <label
                       for="ville"
-                      >ville
+                      > ville
                     </label>
                     <input
                       id="ville"
                       name="ville"
-                      type="text"
+                      value=""
                       class="form-control validate"
                       required
                     />
@@ -137,6 +123,20 @@
                       id="contact"
                       name="contact"
                       type="tel"
+                      class="form-control validate"
+                      required
+                    />
+                </div>
+                <div class="form-group mb-3">
+                    <label
+                      for="utilisateur"
+                      >
+                    </label>
+                    <input
+                      id="utilisateur"
+                      name="utilisateur"
+                      type="text"
+                      value="{{session('utilisateur')->utilisateur}}"
                       class="form-control validate"
                       required
                     />

@@ -53,7 +53,7 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link d-block" href="deconnexion ">
-                {{session('users')->utilisateur}} <b>Deconnexion</b>
+                {{session('utilisateur')->utilisateur}} <b>Deconnexion</b>
               </a>
             </li>
           </ul>

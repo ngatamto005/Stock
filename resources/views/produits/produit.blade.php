@@ -71,15 +71,16 @@
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
-                <form action="" class="tm-edit-product-form">
+                <form action="/produits/enregistrement" method="POST" class="tm-edit-product-form">
+                    @csrf
                   <div class="form-group mb-3">
                     <label
                       for="name"
                       >Nom Produit
                     </label>
                     <input
-                      id="nom_produit"
-                      name="nom_produit"
+                      id="nom"
+                      name="nom"
                       type="text"
                       class="form-control validate"
                       required
@@ -102,12 +103,12 @@
                       for="category"
                       > Categorie </label
                     >
-                    <select
-                      class="custom-select tm-select-accounts"
-                      id="category"
-                    >
+                    <select name="categorie" class="custom-select tm-select-accounts" id="category">
                       <option selected>Selectionner une categorie </option>
-                      <option value="...">...</option>
+                      <option value="shopping">shopping</option>
+                      <option value="medicaments">medicaments</option>
+                      <option value="nourriture">nourriture</option>
+                      <option value="maconnerie">maconnerie</option>
                     </select>
                   </div>
                   <div class="row">
@@ -143,23 +144,17 @@
               </div>
               <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
                 <div class="tm-product-img-dummy mx-auto">
-                  <i
-                    class="fas fa-cloud-upload-alt tm-upload-icon"
-                    onclick="document.getElementById('fileInput').click();"
-                  ></i>
+                <img src="img/product-image.jpg" alt="Product image" class="img-fluid d-block mx-auto">
                 </div>
                 <div class="custom-file mt-3 mb-3">
-                  <input id="fileInput" type="file" style="display:none;" />
-                  <input
-                    type="button"
-                    class="btn btn-primary btn-block mx-auto"
-                    value=" AJOUTER L'IMAGE DU PRODUIT "
+                  <input id="fileInput" name="image" accept="image/*" type="file" style="display:none;" />
+                  <input type="button" class="btn btn-primary btn-block mx-auto" value=" AJOUTER L'IMAGE DU PRODUIT "
                     onclick="document.getElementById('fileInput').click();"
                   />
                 </div>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block text-uppercase"> Ajouter Produit </button>
+                <input type="submit" value="enregistrez les informations" class="btn btn-primary btn-block text-uppercase" >
               </div>
             </form>
             </div>
